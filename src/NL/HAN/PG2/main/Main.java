@@ -1,9 +1,6 @@
 package NL.HAN.PG2.main;
 
 import NL.HAN.PG2.Viewer.Viewer;
-import sun.awt.AWTAccessor;
-
-import java.awt.*;
 
 /**
  * Created by christiaan on 11-3-2015.
