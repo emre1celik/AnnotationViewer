@@ -23,7 +23,9 @@ public class Viewer extends JFrame implements ActionListener {
                 screenSize.width - inset * 2,
                 screenSize.height - inset * 2);
         desktop = new JDesktopPane();
-        createFrame();
+        createFrame("Polynucleotide");
+        createFrame("Amino acids");
+        createFrame("Features");
         setContentPane(desktop);
         setJMenuBar(createMenuBar());
 
@@ -39,16 +41,12 @@ public class Viewer extends JFrame implements ActionListener {
 
         JMenuItem menuItem = new JMenuItem("New");
         menuItem.setMnemonic(KeyEvent.VK_N);
-        menuItem.setAccelerator(KeyStroke.getKeyStroke(
-                KeyEvent.VK_N, ActionEvent.ALT_MASK));
         menuItem.setActionCommand("new");
         menuItem.addActionListener(this);
         file.add(menuItem);
 
         menuItem = new JMenuItem("Quit");
         menuItem.setMnemonic(KeyEvent.VK_Q);
-        menuItem.setAccelerator(KeyStroke.getKeyStroke(
-                KeyEvent.VK_Q, ActionEvent.ALT_MASK));
         menuItem.setActionCommand("quit");
         menuItem.addActionListener(this);
         file.add(menuItem);
@@ -61,19 +59,27 @@ public class Viewer extends JFrame implements ActionListener {
         menuItem.setMnemonic(KeyEvent.VK_O);
         create.add(menuItem);
 
+        JMenu help = new JMenu("Help");
+        help.setMnemonic(KeyEvent.VK_H);
+        menuBar.add(help);
+
+        menuItem = new JMenuItem("About");
+        menuItem.setMnemonic(KeyEvent.VK_A);
+        help.add(menuItem);
+
         return menuBar;
     }
 
     public void actionPerformed(ActionEvent e) {
         if ("new".equals(e.getActionCommand())) {
-            createFrame();
+            createFrame("Something");
         } else {
             quit();
         }
     }
 
-    protected void createFrame() {
-        SubFrame frame = new SubFrame("Test123");
+    protected void createFrame(String header) {
+        SubFrame frame = new SubFrame(header);
         frame.setVisible(true);
         desktop.add(frame);
         try {
@@ -89,7 +95,7 @@ public class Viewer extends JFrame implements ActionListener {
         JFrame.setDefaultLookAndFeelDecorated(true);
 
         Viewer frame = new Viewer();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         frame.setVisible(true);
     }
