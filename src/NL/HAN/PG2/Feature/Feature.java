@@ -10,7 +10,6 @@ public class Feature {
     private byte color;
 
     public void setFeature(){
-
     }
     public String getFeature(){
         return name;

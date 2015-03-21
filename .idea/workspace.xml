@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38679406-721b-4cd6-bd90-d7f0f4425669" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AnnotationViewer/NL/HAN/PG2/SubFrame/SubFrame.class" afterPath="$PROJECT_DIR$/out/production/AnnotationViewer/NL/HAN/PG2/SubFrame/SubFrame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NL/HAN/PG2/Feature/Feature.java" afterPath="$PROJECT_DIR$/src/NL/HAN/PG2/Feature/Feature.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -84,15 +85,15 @@
       <file leaf-file-name="Feature.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NL/HAN/PG2/Feature/Feature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7816092" vertical-offset="0" max-vertical-offset="522">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.74904215" vertical-offset="0" max-vertical-offset="522">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -708,7 +709,7 @@
       <option name="number" value="Default" />
       <updated>1426091175852</updated>
       <workItem from="1426091179630" duration="9296000" />
-      <workItem from="1426928507583" duration="2495000" />
+      <workItem from="1426928507583" duration="2662000" />
     </task>
     <task id="LOCAL-00001" summary="Start with viewer">
       <created>1426102468138</created>
@@ -734,11 +735,17 @@
       <option name="project" value="LOCAL" />
       <updated>1426930588825</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added classes">
+      <created>1426931008989</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1426931008989</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11791000" />
+    <option name="totallyTimeSpent" value="11958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -912,15 +919,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NL/HAN/PG2/Feature/Feature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7816092" vertical-offset="0" max-vertical-offset="522">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.74904215" vertical-offset="0" max-vertical-offset="522">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
           </folding>
         </state>
       </provider>
