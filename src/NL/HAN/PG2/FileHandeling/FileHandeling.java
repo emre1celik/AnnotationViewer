@@ -19,8 +19,9 @@ public class FileHandeling {
     private String name;
     private String type;
     private File adres;
+    private int SeqType;
 
-    public void setFile(String fileadres){
+    public void setFile(String fileadres, int kind){
         String ext = "";
         adres = new File(fileadres);
 
@@ -53,7 +54,18 @@ public class FileHandeling {
         FileExtension typeenum = FileExtension.valueOf(type);
 
         switch (typeenum){
+            case gff:
+                break;
             case Fasta:
+                if(SeqType == 1){
+                    //open fasta as nucleotide
+                }
+                else{
+                    //open fasta as protein
+                }
+                break;
+            case Genbank:
+                break;
 
         }
     }
