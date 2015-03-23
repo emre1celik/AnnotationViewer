@@ -9,14 +9,17 @@ import NL.HAN.PG2.FileHandeling.FileHandeling;
 public class Main {
 
     public static void main(String[] args){
+        /*
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 Viewer temp = new Viewer();
                 temp.createAndShowGUI();
             }
         });
+        */
         FileHandeling test = new FileHandeling();
         test.setFile("test.fa", 1);
         System.out.println(test.getType());
+        test.openFile();
     }
 }

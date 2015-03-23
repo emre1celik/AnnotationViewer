@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38679406-721b-4cd6-bd90-d7f0f4425669" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnnotationViewer.iml" afterPath="$PROJECT_DIR$/AnnotationViewer.iml" />
+      <change type="MODIFICATION" beforePath="C:\Users\Chris Cornelisse\Documents\GitHub\AnnotationViewer\out\production\AnnotationViewer\NL\HAN\PG2\main\Main$1.class" afterPath="C:\Users\Chris Cornelisse\Documents\GitHub\AnnotationViewer\out\production\AnnotationViewer\NL\HAN\PG2\main\Main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AnnotationViewer/NL/HAN/PG2/main/Main.class" afterPath="$PROJECT_DIR$/out/production/AnnotationViewer/NL/HAN/PG2/main/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AnnotationViewer/NL/HAN/PG2/Sequence/Sequence.class" afterPath="$PROJECT_DIR$/out/production/AnnotationViewer/NL/HAN/PG2/Sequence/Sequence.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AnnotationViewer/NL/HAN/PG2/Viewer/Viewer.class" afterPath="$PROJECT_DIR$/out/production/AnnotationViewer/NL/HAN/PG2/Viewer/Viewer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NL/HAN/PG2/FileHandeling/FileHandeling.java" afterPath="$PROJECT_DIR$/src/NL/HAN/PG2/FileHandeling/FileHandeling.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NL/HAN/PG2/main/Main.java" afterPath="$PROJECT_DIR$/src/NL/HAN/PG2/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AnnotationViewer.iws" />
@@ -116,23 +118,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileHandeling.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FileHandeling.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NL/HAN/PG2/FileHandeling/FileHandeling.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="591" max-vertical-offset="1513">
-              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.5120846" vertical-offset="596" max-vertical-offset="1275">
+              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#saveFile#0;class#FileHandeling#0" expanded="false" />
+                <element signature="class#FileExtension#0;class#FileHandeling#0" expanded="false" />
+                <element signature="e#1733#1754#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NL/HAN/PG2/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51359516" vertical-offset="0" max-vertical-offset="662">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -471,8 +476,8 @@
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
@@ -692,6 +697,9 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -767,7 +775,7 @@
       <workItem from="1427109248786" duration="51000" />
       <workItem from="1427115640139" duration="100000" />
       <workItem from="1427116499585" duration="37000" />
-      <workItem from="1427116620196" duration="1753000" />
+      <workItem from="1427116620196" duration="7396000" />
     </task>
     <task id="LOCAL-00001" summary="Start with viewer">
       <created>1426102468138</created>
@@ -835,11 +843,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427109281690</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="FileHandeling progress">
+      <created>1427120298332</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1427120298332</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23179000" />
+    <option name="totallyTimeSpent" value="28822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -929,6 +943,9 @@
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#saveFile#0;class#FileHandeling#0" expanded="false" />
+            <element signature="class#FileExtension#0;class#FileHandeling#0" expanded="false" />
+            <element signature="e#1733#1754#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -999,6 +1016,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#saveFile#0;class#FileHandeling#0" expanded="false" />
+            <element signature="class#FileExtension#0;class#FileHandeling#0" expanded="false" />
+            <element signature="e#1733#1754#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1069,6 +1089,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#saveFile#0;class#FileHandeling#0" expanded="false" />
+            <element signature="class#FileExtension#0;class#FileHandeling#0" expanded="false" />
+            <element signature="e#1733#1754#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1361,22 +1384,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NL/HAN/PG2/FileHandeling/FileHandeling.java">
+    <entry file="file://$PROJECT_DIR$/src/NL/HAN/PG2/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="591" max-vertical-offset="1513">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NL/HAN/PG2/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/NL/HAN/PG2/FileHandeling/FileHandeling.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51359516" vertical-offset="0" max-vertical-offset="662">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5120846" vertical-offset="596" max-vertical-offset="1275">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#saveFile#0;class#FileHandeling#0" expanded="false" />
+            <element signature="class#FileExtension#0;class#FileHandeling#0" expanded="false" />
+            <element signature="e#1733#1754#0" expanded="true" />
           </folding>
         </state>
       </provider>
