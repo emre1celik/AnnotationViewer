@@ -32,9 +32,8 @@ public class FileHandeling {
         if (i>=0) {
             name = fileadres.substring(i+1);
         }
-        System.out.println(name);
-        FileExtension extenum = FileExtension.valueOf(ext.toLowerCase());
 
+        FileExtension extenum = FileExtension.valueOf(ext.toLowerCase());
         switch (extenum)
         {
             case fa:
@@ -75,7 +74,6 @@ public class FileHandeling {
                 break;
             case Genbank:
                 break;
-
         }
     }
 
