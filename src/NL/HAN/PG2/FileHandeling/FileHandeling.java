@@ -1,5 +1,13 @@
 package NL.HAN.PG2.FileHandeling;
 
+import NL.HAN.PG2.DNA.DNA;
+
+import NL.HAN.PG2.RNA.RNA;
+import org.biojava.nbio.core.exceptions.CompoundNotFoundException;
+import org.biojava.nbio.core.sequence.DNASequence;
+import org.biojava.nbio.core.sequence.ProteinSequence;
+import org.biojava.nbio.core.sequence.RNASequence;
+
 import java.io.*;
 import java.util.EmptyStackException;
 
@@ -10,9 +18,8 @@ public class FileHandeling {
     private String name;
     private String type;
     private File adres;
-    private int SeqType;
 
-    public void setFile(String fileadres, int kind){
+    public void setFile(String fileadres){
         String ext = "";
         adres = new File(fileadres);
 
@@ -20,6 +27,12 @@ public class FileHandeling {
         if (i >= 0) {
             ext = fileadres.substring(i+1);
         }
+
+        i = fileadres.lastIndexOf('\\');
+        if (i>=0) {
+            name = fileadres.substring(i+1);
+        }
+        System.out.println(name);
         FileExtension extenum = FileExtension.valueOf(ext.toLowerCase());
 
         switch (extenum)
@@ -37,11 +50,12 @@ public class FileHandeling {
                 type = "Genbank";
                 break;
         }
-        SeqType = kind;
     }
+
     public String getType(){
         return type;
     }
+
     public void openFile(){
 
         FileExtension typeenum = FileExtension.valueOf(type);
@@ -55,16 +69,16 @@ public class FileHandeling {
                 catch (IOException ioEx){
                     System.out.println("File does not exsist");
                 }
-                catch (EmptyStackException emptySt){
+                catch (EmptyStackException emptySt) {
                     System.out.println("File is not fasta!");
                 }
-                
                 break;
             case Genbank:
                 break;
 
         }
     }
+
     public void saveFile(){
 
     }
@@ -98,9 +112,27 @@ public class FileHandeling {
                 sequence += line;
             }
         }
-        System.out.println(header);
-        System.out.println(sequence);
         br.close();
+        try {
+            DNASequence dna = new DNASequence(sequence);
+            DNA.setSequence(sequence);
+            return;
+        }
+        catch (CompoundNotFoundException exp){
+        }
+        try {
+            RNASequence rna = new RNASequence(sequence);
+            RNA.setSequence(sequence);
+            return;
+        }
+        catch (CompoundNotFoundException exp){
+        }
+        try {
+            ProteinSequence prot = new ProteinSequence(sequence);
+            return;
+        }
+        catch (CompoundNotFoundException exp){
+        }
     }
 
 }
