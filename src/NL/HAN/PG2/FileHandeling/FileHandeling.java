@@ -1,11 +1,6 @@
 package NL.HAN.PG2.FileHandeling;
 
-
-import org.biojava.nbio.core.sequence.DNASequence;
-import org.biojava.nbio.core.sequence.io.FastaReaderHelper;
-
-import java.io.File;
-import java.util.LinkedHashMap;
+import java.io.*;
 
 /**
  * Created by christiaan on 23-3-2015.
@@ -13,12 +8,12 @@ import java.util.LinkedHashMap;
 public class FileHandeling {
     private String name;
     private String type;
-    private File adres;
+    private String adres;
     private int SeqType;
 
     public void setFile(String fileadres, int kind){
         String ext = "";
-        adres = new File(fileadres);
+        adres = fileadres;
 
         int i = fileadres.lastIndexOf('.');
         if (i >= 0) {
@@ -47,8 +42,9 @@ public class FileHandeling {
         return type;
     }
     public void openFile(){
-        FileExtension typeenum = FileExtension.valueOf(type);
 
+
+        FileExtension typeenum = FileExtension.valueOf(type);
         switch (typeenum){
             case gff:
                 break;
@@ -73,8 +69,18 @@ public class FileHandeling {
         Fasta
     }
 
-    private void DNARead() throws Exception{
-        FastaReaderHelper temp = new FastaReaderHelper();
-        LinkedHashMap<String, DNASequence> DNA = new LinkedHashMap<String, DNASequence>(temp.readFastaDNASequence(adres));
+    private static void readFile1(File fin) throws IOException {
+        FileInputStream fis = new FileInputStream(fin);
+
+        //Construct BufferedReader from InputStreamReader
+        BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+
+        String line = null;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+
+        br.close();
     }
+
 }
