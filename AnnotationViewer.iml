@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="org.biojava:biojava-core:4.0.0" level="project" />
+    <orderEntry type="library" name="org.biojava:biojava-sequencing:4.0.0" level="project" />
   </component>
 </module>

@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="org.biojava:biojava-sequencing:4.0.0" type="repository">
+    <properties maven-id="org.biojava:biojava-sequencing:4.0.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/biojava-sequencing-4.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/guava-18.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/biojava-core-4.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-slf4j-impl-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-api-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-core-2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
