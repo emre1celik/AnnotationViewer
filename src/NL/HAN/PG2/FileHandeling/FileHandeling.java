@@ -8,12 +8,12 @@ import java.io.*;
 public class FileHandeling {
     private String name;
     private String type;
-    private String adres;
+    private File adres;
     private int SeqType;
 
     public void setFile(String fileadres, int kind){
         String ext = "";
-        adres = fileadres;
+        adres = new File(fileadres);
 
         int i = fileadres.lastIndexOf('.');
         if (i >= 0) {
@@ -42,8 +42,12 @@ public class FileHandeling {
         return type;
     }
     public void openFile(){
-
-
+        try {
+            readFile(adres);
+        }
+        catch (IOException ioEx){
+            System.out.println("File does not exsist");
+        }
         FileExtension typeenum = FileExtension.valueOf(type);
         switch (typeenum){
             case gff:
@@ -69,7 +73,7 @@ public class FileHandeling {
         Fasta
     }
 
-    private static void readFile1(File fin) throws IOException {
+    private static void readFile(File fin) throws IOException {
         FileInputStream fis = new FileInputStream(fin);
 
         //Construct BufferedReader from InputStreamReader

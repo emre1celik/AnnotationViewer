@@ -1,6 +1,5 @@
 package NL.HAN.PG2.main;
 
-import NL.HAN.PG2.Viewer.Viewer;
 import NL.HAN.PG2.FileHandeling.FileHandeling;
 
 /**
@@ -18,7 +17,7 @@ public class Main {
         });
         */
         FileHandeling test = new FileHandeling();
-        test.setFile("test.fa", 1);
+        test.setFile("C:\\Users\\Chris Cornelisse\\Documents\\GitHub\\AnnotationViewer\\test\\test.fa", 1);
         System.out.println(test.getType());
         test.openFile();
     }
