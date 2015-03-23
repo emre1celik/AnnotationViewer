@@ -1,5 +1,11 @@
 package NL.HAN.PG2.Feature;
 
+import org.biojava.nbio.core.exceptions.CompoundNotFoundException;
+import org.biojava.nbio.core.sequence.compound.NucleotideCompound;
+import org.biojava.nbio.core.sequence.edits.Edit;
+import org.biojava.nbio.core.sequence.template.Compound;
+import org.biojava.nbio.core.sequence.template.Sequence;
+
 /**
  * Created by christiaan on 21-3-2015.
  */
