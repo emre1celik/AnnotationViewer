@@ -1,6 +1,7 @@
 package NL.HAN.PG2.FileHandeling;
 
 import java.io.*;
+import java.util.EmptyStackException;
 
 /**
  * Created by christiaan on 23-3-2015.
@@ -42,18 +43,22 @@ public class FileHandeling {
         return type;
     }
     public void openFile(){
-        try {
-            readFile(adres);
-        }
-        catch (IOException ioEx){
-            System.out.println("File does not exsist");
-        }
+
         FileExtension typeenum = FileExtension.valueOf(type);
         switch (typeenum){
             case gff:
                 break;
             case Fasta:
-
+                try {
+                    readFasta(adres);
+                }
+                catch (IOException ioEx){
+                    System.out.println("File does not exsist");
+                }
+                catch (EmptyStackException emptySt){
+                    System.out.println("File is not fasta!");
+                }
+                
                 break;
             case Genbank:
                 break;
@@ -73,17 +78,28 @@ public class FileHandeling {
         Fasta
     }
 
-    private static void readFile(File fin) throws IOException {
+    private static void readFasta(File fin) throws IOException {
         FileInputStream fis = new FileInputStream(fin);
-
-        //Construct BufferedReader from InputStreamReader
         BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-
         String line = null;
-        while ((line = br.readLine()) != null) {
-            System.out.println(line);
-        }
+        String header = "";
+        String sequence = "";
+        int i = 0;
 
+        while ((line = br.readLine()) != null) {
+            if(i == 0){
+                if(line.charAt(0)!='>'){
+                    throw new EmptyStackException();
+                }
+                header = line;
+                i = 1;
+            }
+            else {
+                sequence += line;
+            }
+        }
+        System.out.println(header);
+        System.out.println(sequence);
         br.close();
     }
 
