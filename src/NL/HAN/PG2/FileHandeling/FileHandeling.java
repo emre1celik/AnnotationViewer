@@ -47,7 +47,7 @@ public class FileHandeling {
             case gff:
                 type = "gff";
                 break;
-            case gbk:
+            case gb:
                 type = "Genbank";
                 break;
         }
@@ -75,6 +75,16 @@ public class FileHandeling {
                 }
                 break;
             case Genbank:
+                try{
+                    Sequence returner = readGenBank(adres);
+                    return returner;
+                }
+                catch (IOException ioEx){
+                    System.out.println("File does not exist");
+                }
+                catch (EmptyStackException emtySt){
+                    System.out.println("File is not genbank");
+                }
                 break;
         }
         throw new EmptyStackException();
@@ -136,11 +146,16 @@ public class FileHandeling {
         throw new EmptyStackException();
     }
 
+    private Sequence readGenBank(File fin) throws IOException{
+
+        return returner;
+    }
+
     public enum FileExtension{
         fasta,
         fa,
         gff,
-        gbk,
+        gb,
         Genbank,
         Fasta
     }
