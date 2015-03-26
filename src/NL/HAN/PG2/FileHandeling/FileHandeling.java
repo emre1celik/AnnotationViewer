@@ -2,7 +2,9 @@ package NL.HAN.PG2.FileHandeling;
 
 import NL.HAN.PG2.DNA.DNA;
 
+import NL.HAN.PG2.Protein.Protein;
 import NL.HAN.PG2.RNA.RNA;
+import NL.HAN.PG2.Sequence.Sequence;
 import org.biojava.nbio.core.exceptions.CompoundNotFoundException;
 import org.biojava.nbio.core.sequence.DNASequence;
 import org.biojava.nbio.core.sequence.ProteinSequence;
@@ -55,42 +57,34 @@ public class FileHandeling {
         return type;
     }
 
-    public void openFile(){
+    public String getName() {return name; }
 
+    public Sequence openFile() throws EmptyStackException{
         FileExtension typeenum = FileExtension.valueOf(type);
-        switch (typeenum){
+        switch (typeenum) {
             case gff:
                 break;
             case Fasta:
                 try {
-                    readFasta(adres);
-                }
-                catch (IOException ioEx){
-                    System.out.println("File does not exsist");
-                }
-                catch (EmptyStackException emptySt) {
+                    Sequence returner = readFasta(adres);
+                    return returner;
+                } catch (IOException ioEx) {
+                    System.out.println("File does not exist");
+                } catch (EmptyStackException emptySt) {
                     System.out.println("File is not fasta!");
                 }
                 break;
             case Genbank:
                 break;
         }
+        throw new EmptyStackException();
     }
 
     public void saveFile(){
 
     }
 
-    public enum FileExtension{
-        fasta,
-        fa,
-        gff,
-        gbk,
-        Genbank,
-        Fasta
-    }
-
-    private static void readFasta(File fin) throws IOException {
+    private Sequence readFasta(File fin) throws IOException {
         FileInputStream fis = new FileInputStream(fin);
         BufferedReader br = new BufferedReader(new InputStreamReader(fis));
         String line = null;
@@ -113,24 +107,43 @@ public class FileHandeling {
         br.close();
         try {
             DNASequence dna = new DNASequence(sequence);
-            DNA.setSequence(sequence);
-            return;
+            DNA returnSequence = new DNA();
+            returnSequence.setSequence(sequence);
+            returnSequence.setName(header);
+            return returnSequence;
         }
         catch (CompoundNotFoundException exp){
         }
         try {
             RNASequence rna = new RNASequence(sequence);
-            RNA.setSequence(sequence);
-            return;
+            RNA returnSequence = new RNA();
+            returnSequence.setSequence(sequence);
+            returnSequence.setName(header);
+            return returnSequence;
         }
         catch (CompoundNotFoundException exp){
         }
         try {
             ProteinSequence prot = new ProteinSequence(sequence);
-            return;
+            Protein returnSequence = new Protein();
+            returnSequence.setSequence(sequence);
+            returnSequence.setName(header);
+            returnSequence.readingFrame = 0;
         }
         catch (CompoundNotFoundException exp){
+
         }
+        throw new EmptyStackException();
     }
 
+    public enum FileExtension{
+        fasta,
+        fa,
+        gff,
+        gbk,
+        Genbank,
+        Fasta
+    }
 }
+
+
