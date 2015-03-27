@@ -11,11 +11,20 @@ import java.sql.Statement;
  */
 public class Database {
     
-    public static String url = "jdbc:mysql://localhost:3306/";
-    public static String dbName = "Annotation";
+   public static String url = "jdbc:mysql://mysql14.000webhost.com:3306/";
+    public static String dbName = "a6872091_annotat";
     public static String driver = "com.mysql.jdbc.Driver"; 
-    public static String userName = "root"; 
-    public static String password = "";
+    public static String userName = "a6872091_annotat"; 
+    public static String password = "blaat1234";
+    
+    /*
+    Voorbeeld van de werking van de database.
+
+    public static void main(String[] args) {
+        insert("Organism" /*Tabel naam*/,
+                "1, 1" /*Waardes op volgorde van kolommen*/);
+     }
+     */
     
     /**
      * Retourneert integer waarde die indien de insert succsesvol 
