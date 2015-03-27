@@ -1,6 +1,7 @@
 package NL.HAN.PG2.Viewer;
 
 import NL.HAN.PG2.SubFrame.SubFrame;
+import NL.HAN.PG2.Database.Database;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -126,6 +127,10 @@ public class Viewer extends JFrame implements ActionListener {
                 openFile();
                 break;
             }
+            case "openrecord": {
+                openRecord();
+                break;
+            }
             case "about": {
                 showAbout();
                 break;
@@ -137,6 +142,13 @@ public class Viewer extends JFrame implements ActionListener {
         }
     }
 
+    private void openRecord() {
+        //Database.select("Organism", null, null); //Select alles uit tabel Organism
+        //Database.select("Organism", "organism_id", 1); //Select items uit tabel Organism waar organism_id 1 is
+        //Database.insert("Organism", "1, 1"); //Insert item in tabel Organism met twee waardes
+        //Database.update("Sequence", "organism_id = `1`", "organism_sequence = `ATGATATAGACGATAGCGTGC`") //Update organism_id 1 in Sequence naar nieuwe sequentie
+    }
+    
     private void createFrame(String header, int xpos, int ypos, int framewidth, int frameheight) {
         SubFrame frame = new SubFrame(header);
         frame.setVisible(true);
